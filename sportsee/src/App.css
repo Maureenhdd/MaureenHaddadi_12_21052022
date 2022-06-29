@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bar_chart {
+  background-color: #FBFBFB;
+  width: 960px;
+  margin: 50px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chart_block {
+  padding-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.axis {
+  color: #FBFBFB;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.grid-line {
+  stroke: black;
+  opacity: 0.2;
+  stroke-dasharray: 1.2;
+}
+
+text {
+  color: #9B9EAC;
+  padding: 20px;
+}
+
+
+
+.line_chart {
+  background-color: #FF0000;
+  width: 270px;
+  border-radius: 10px;
+  padding: 10px 0;
+  margin: 200px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
+  position: relative;
+
+}
+
+.line_chart--title {
   color: white;
+  font-size: 16px;
+  padding: 10px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+  opacity: 0.5;
 }
 
-.App-link {
-  color: #61dafb;
+.axis_line,
+.axis_line--y {
+  color: #FF0000
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.axis_line--y>.tick>text {
+  display: none;
+}
+
+.axis_line>.tick>text {
+  color: #FFFFFF;
+  font-size: 12px;
+  opacity: 0.5;
+
+}
+
+.myCircle {
+  opacity: 0;
+  transition: 0.1s;
+}
+
+.myCircle:hover {
+  opacity: 1;
+}
+
+.highlight {
+  background-color: #4d2e2e88;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  transition : opacity  0.2s;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+
 }
