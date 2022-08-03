@@ -1,0 +1,52 @@
+.daily_cards_block {
+    background-color: #FBFBFB;
+    /* background-color: pink; */
+    width: 260px;
+    /* margin: 20px 0; */
+    margin-bottom : 50px;
+    padding  : 32px 10px ; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius : 5px; 
+}
+
+.icon--red {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.icon--blue {
+    background-color: rgba(74, 184, 255, 0.1);
+    ;
+}
+
+.icon--yellow {
+    background-color: rgba(249, 206, 35, 0.1);
+}
+
+.icon--pink {
+    background-color: rgba(253, 81, 129, 0.1);
+}
+
+.daily_card_block__i {
+    padding: 20px;
+    width: 15px;
+    height: 20px;
+    border-radius: 5px;
+
+}
+
+.daily_cards_block__left :where(h4, p){
+    margin : 5px ; 
+}
+
+.daily_cards_block__left h4{
+    font-size: 20px; 
+}
+
+.daily_cards_block__left p{
+    font-size: 14px; 
+    color : rgba(116, 121, 140, 1); 
+    font-weight : 500; 
+}
