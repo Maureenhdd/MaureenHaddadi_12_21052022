@@ -15,14 +15,14 @@ class Mock {
 
     getSessionData() {
 
-        const data = [{ "day": 1, "sessionLength": 20 }, { "day": 2, "sessionLength": 90 }, { "day": 3, "sessionLength": 5 }, { "day": 4, "sessionLength": 50 }, { "day": 5, "sessionLength": 10 }, { "day": 6, "sessionLength": 90 }, { "day": 7, "sessionLength": 0 }]
+        const data = [{ "day": 1, "sessionLength": 50 }, { "day": 2, "sessionLength": 30 }, { "day": 3, "sessionLength": 25}, { "day": 4, "sessionLength": 20 }, { "day": 5, "sessionLength": 60 }, { "day": 6, "sessionLength": 60 }, { "day": 7, "sessionLength": 30 }]
 
         return data
 
     }
 
     getActivityData() {
-        const data = [{ "day": "2020-07-01", "kilogram": 600, "calories": 100 }, { "day": "2020-07-02", "kilogram": 80, "calories": 320 }, { "day": "2020-07-03", "kilogram": 81, "calories": 200 }, { "day": "2020-07-04", "kilogram": 81, "calories": 120 }, { "day": "2020-07-05", "kilogram": 80, "calories": 100 }, { "day": "2020-07-06", "kilogram": 78, "calories": 22 }, { "day": "2020-07-07", "kilogram": 76, "calories": 600 }]
+        const data = [{ "day": "2020-07-01", "kilogram": 50, "calories": 200 }, { "day": "2020-07-02", "kilogram": 50, "calories": 320 }, { "day": "2020-07-03", "kilogram": 51, "calories": 200 }, { "day": "2020-07-04", "kilogram": 52, "calories": 120 }, { "day": "2020-07-05", "kilogram": 51, "calories": 100 }, { "day": "2020-07-06", "kilogram": 53, "calories": 150 }, { "day": "2020-07-07", "kilogram": 50, "calories": 300 }]
 
 
         return data

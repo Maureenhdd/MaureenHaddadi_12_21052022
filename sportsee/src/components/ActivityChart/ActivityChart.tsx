@@ -1,13 +1,25 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3'
 import { chart_bar } from './utils'
+import PropTypes from 'prop-types';
+
+/**
+ * Component for Sessions graph
+ * @component
+ * @prop {array} activity - stock weight and calories bruned of the user 
+ * 
+ * 
+ * @return {FunctionalComponent}
+ * 
+ */
 
 
-type Props = {
-    activity: []
-}
+// type Props = {
+//     activity: []
+// }
 
-const ActivityChart: any = ({ activity }: Props) => {
+const ActivityChart: any = ({ activity }) => {
 
     useEffect(() => {
         if (activity) {
@@ -20,5 +32,12 @@ const ActivityChart: any = ({ activity }: Props) => {
 
     )
 }
+
+
+ActivityChart.propTypes = {
+    activity: PropTypes.array,
+
+}
+
 
 export default ActivityChart

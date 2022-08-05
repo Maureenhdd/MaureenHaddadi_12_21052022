@@ -6,23 +6,24 @@ import PropTypes from 'prop-types';
 
 /**
  * Component for daily user info card 
- * @param {string} title title of card
- * @param {string} subtitle subtitle of card
- * @param {string} icon url of icon 
- * @param {string} bg background color for icon 
+ * @component
+ * @prop {string} title title of card
+ * @prop {string} subtitle subtitle of card
+ * @prop {string} icon url of icon 
+ * @prop {string} bg background color for icon 
  * 
  * @return {FunctionalComponent}
  * 
  */
 
-type Props = {
-    title: string
-    subtitle: string
-    icon: string
-    bg: string
-}
+// type Props = {
+//     title: string
+//     subtitle: string
+//     icon: string
+//     bg: string
+// }
 
-const DailyCard: any = ({ title, subtitle, icon, bg }: Props) => {
+const DailyCard: any = ({ title, subtitle, icon, bg }: any) => {
 
     return (
         <div className="daily_cards_block" ><img src={icon} alt={`icon`} className={`daily_card_block__i icon--${bg}`} />
@@ -34,9 +35,21 @@ const DailyCard: any = ({ title, subtitle, icon, bg }: Props) => {
 }
 
 DailyCard.propTypes = {
+    /**
+ * card's title
+ */
     title: PropTypes.string,
+    /**
+* card's subtitle
+*/
     subtitle: PropTypes.string,
+    /**
+* card's icon url 
+*/
     icon: PropTypes.string,
+    /**
+* card's background color 
+*/
     bg: PropTypes.string
 }
 

@@ -1,19 +1,21 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import useData from '../../hooks/useData'
+import PropTypes from 'prop-types';
 
 
 /**
  * Component for session graph
- * @param {Array} perfData stock performance of the user 
+ * @component
+ * @prop {Array} perfData stock performance of the user 
  * 
  * @return {FunctionalComponent}
  * 
  */
-type Props = {
-    perfData: string[]
-}
-const SpiderChart: any = ({ perfData }: Props) => {
+// type Props = {
+//     perfData: string[]
+// }
+const SpiderChart = ({ perfData }: any) => {
 
     return (
         <div className="spider_chart" style={{ width: 260, height: 289, backgroundColor: "#282D30", borderRadius: 10 }}>
@@ -44,5 +46,9 @@ const SpiderChart: any = ({ perfData }: Props) => {
 
 }
 
+SpiderChart.propTypes = {
+    
+    score: PropTypes.array,
+}
 
 export default SpiderChart

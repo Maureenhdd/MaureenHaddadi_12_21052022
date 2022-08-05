@@ -1,7 +1,8 @@
-// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3'
 import { sessionChart } from './utils'
+import PropTypes from 'prop-types';
+
 
 /**
  * Component for Sessions graph
@@ -14,11 +15,9 @@ import { sessionChart } from './utils'
  */
 
 
-// type Props = {
-//     sessions: string[],
-// }
 
-const SessionChart: any = ({ sessions }: Props) => {
+
+const SessionChart: any = ({ sessions }: any) => {
 
     useEffect(() => {
         sessions === undefined ? <></> :
@@ -30,4 +29,8 @@ const SessionChart: any = ({ sessions }: Props) => {
     )
 }
 
+SessionChart.propTypes = {
+    
+    sessions: PropTypes.array,
+}
 export default SessionChart

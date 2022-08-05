@@ -27,7 +27,6 @@ export const chart_bar = (activity: any[], id: string) => {
 
 
     let data = activity
-    console.log(activity)
     let calories = Math.max(...data.map(kilo => kilo.calories))
 
     // Add X axis

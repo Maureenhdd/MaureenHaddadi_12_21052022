@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: DailyCard/DailyCard.tsx</title>
+    <title>JSDoc: Source: GoalChart/GoalChart.tsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: DailyCard/DailyCard.tsx</h1>
+    <h1 class="page-title">Source: GoalChart/GoalChart.tsx</h1>
 
     
 
@@ -28,60 +28,44 @@
         <article>
             <pre class="prettyprint source linenums"><code>import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3'
-import '../DailyCard/DailyCard.css'
+import { donut_chart } from './utils'
 import PropTypes from 'prop-types';
 
-
 /**
- * Component for daily user info card 
+ * Component for Sessions graph
  * @component
- * @prop {string} title title of card
- * @prop {string} subtitle subtitle of card
- * @prop {string} icon url of icon 
- * @prop {string} bg background color for icon 
+ * @prop {array} score - daily goal of the user 
+ * 
  * 
  * @return {FunctionalComponent}
  * 
  */
 
 // type Props = {
-//     title: string
-//     subtitle: string
-//     icon: string
-//     bg: string
+//     score: number
 // }
 
-const DailyCard: any = ({ title, subtitle, icon, bg }: any) => {
+const GoalChart = ({ score }: any) => {
+
+
+
+    useEffect(() => {
+        score === undefined ? &lt;>&lt;/> :
+            donut_chart(score)
+    }, [score])
 
     return (
-        &lt;div className="daily_cards_block" >&lt;img src={icon} alt={`icon`} className={`daily_card_block__i icon--${bg}`} />
-            &lt;div className="daily_cards_block__left">
-                &lt;h4>{title}&lt;/h4>
-                &lt;p>{subtitle}&lt;/p>
-            &lt;/div>&lt;/div>
+        &lt;div id="donut">&lt;/div>
     )
 }
 
-DailyCard.propTypes = {
-    /**
- * card's title
- */
-    title: PropTypes.string,
-    /**
-* card's subtitle
-*/
-    subtitle: PropTypes.string,
-    /**
-* card's icon url 
-*/
-    icon: PropTypes.string,
-    /**
-* card's background color 
-*/
-    bg: PropTypes.string
+GoalChart.propTypes = {
+    
+    score: PropTypes.number.isRequired,
 }
 
-export default DailyCard</code></pre>
+export default GoalChart
+</code></pre>
         </article>
     </section>
 

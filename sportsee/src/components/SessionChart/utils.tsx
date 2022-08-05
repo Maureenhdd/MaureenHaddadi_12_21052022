@@ -24,7 +24,6 @@ export const sessionChart = (sessions) => {
     const days = ["L", "Mar", "Mer", "J", "V", "S", "D"]
 
     sessions.map(d => d.day = days[d.day - 1])
-    console.log(sessions)
 
     // Add X axis
     const x = d3.scaleBand()
@@ -50,6 +49,7 @@ export const sessionChart = (sessions) => {
         .attr("stroke", "white")
         .attr("stroke-width", 3)
         .attr("stroke-linecap", "round")
+        .attr("transform", `translate(20, 0)`)
         .attr("d", d3.line()
             .curve(d3.curveCatmullRom) // Just add that to have a curve instead of segments
             .x(d => x(d.day))
@@ -103,7 +103,7 @@ export const sessionChart = (sessions) => {
         .data(sessions)
         .join("circle")
         .attr("class", "myCircle")
-        .attr("cx", d => x(d.day))
+        .attr("cx", d => x(d.day)+20)
         .attr("cy", d => y(d.sessionLength))
         .attr("r", 8)
         .attr("fill", "white")
