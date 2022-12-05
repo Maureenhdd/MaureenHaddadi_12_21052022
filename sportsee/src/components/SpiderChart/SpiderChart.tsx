@@ -12,9 +12,7 @@ import PropTypes from 'prop-types';
  * @return {FunctionalComponent}
  * 
  */
-// type Props = {
-//     perfData: string[]
-// }
+
 const SpiderChart = ({ perfData }: any) => {
 
     return (
@@ -47,7 +45,7 @@ const SpiderChart = ({ perfData }: any) => {
 }
 
 SpiderChart.propTypes = {
-    
+
     score: PropTypes.array,
 }
 

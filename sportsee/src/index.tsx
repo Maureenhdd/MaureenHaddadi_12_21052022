@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      retry : false,
+      retry: false,
     },
   },
 }
@@ -24,7 +24,6 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>
-
   </>
 );
 

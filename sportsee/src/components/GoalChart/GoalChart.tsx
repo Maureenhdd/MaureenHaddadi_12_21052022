@@ -19,12 +19,11 @@ import PropTypes from 'prop-types';
 
 const GoalChart = ({ score }: any) => {
 
-
-
     useEffect(() => {
         score === undefined ? <></> :
             donut_chart(score)
-    }, [score])
+    }, [])
+
 
     return (
         <div id="donut"></div>
@@ -32,7 +31,7 @@ const GoalChart = ({ score }: any) => {
 }
 
 GoalChart.propTypes = {
-    
+
     score: PropTypes.number.isRequired,
 }
 

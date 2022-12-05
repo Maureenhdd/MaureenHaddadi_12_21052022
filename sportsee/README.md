@@ -4,16 +4,28 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Before go to the project sportsee : 
+### `cd/sportsee`
+
+Then install all the packages with : 
+
+### `npm install --force`
+
 In the project directory,  if you want to run with mock data, you can run:
 
-### `npm startMock`
+### `npm run startMock`
 
-Or if you want to run with data from API, you can run:
+If you want to run the project with the data from the API , first you have to clone this project : "https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard" in sportsee_back folder. 
 
-### `npm startAPI`
+Then you have to install packages with : 
+### `yarn`
+
+and to finish you can run in the sportsee folder :
+
+### `npm run startAPI`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
