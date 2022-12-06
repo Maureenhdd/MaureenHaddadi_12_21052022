@@ -1,6 +1,5 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import useData from '../../hooks/useData'
 import PropTypes from 'prop-types';
 
 

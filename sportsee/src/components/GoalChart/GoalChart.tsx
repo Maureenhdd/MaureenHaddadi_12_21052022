@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import * as d3 from 'd3'
+import { useEffect } from 'react';
 import { donut_chart } from './utils'
 import PropTypes from 'prop-types';
 
@@ -12,10 +11,6 @@ import PropTypes from 'prop-types';
  * @return {FunctionalComponent}
  * 
  */
-
-// type Props = {
-//     score: number
-// }
 
 const GoalChart = ({ score }: any) => {
 

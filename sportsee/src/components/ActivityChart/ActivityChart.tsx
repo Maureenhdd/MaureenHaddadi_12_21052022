@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import * as d3 from "d3";
+import { useEffect } from "react";
 import { chart_bar } from "./utils";
 import PropTypes from "prop-types";
 

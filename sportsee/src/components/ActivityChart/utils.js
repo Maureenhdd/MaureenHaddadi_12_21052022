@@ -43,9 +43,9 @@ export const chart_bar = (activity) => {
     .enter()
     .append("line")
     .attr("class", "grid-line")
-    .attr("x1", (d) => 0)
+    .attr("x1", () => 0)
     .attr("y1", (d) => y(d))
-    .attr("x2", (d) => width)
+    .attr("x2", () => width)
     .attr("y2", (d) => y(d));
 
   // Another scale for subgroup position?
@@ -64,7 +64,6 @@ export const chart_bar = (activity) => {
   // create a tooltip
   const tooltip = d3
     .select("#my_dataviz")
-
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
@@ -95,7 +94,6 @@ export const chart_bar = (activity) => {
   // Show the bars
   svg
     .append("g")
-
     .selectAll("g")
     // Enter in data = loop group per group
     .data(data)
@@ -121,8 +119,6 @@ export const chart_bar = (activity) => {
     .attr("ry", 5)
     .attr("width", 10)
     .attr("fill", (d) => color(d.key))
-    // .transition()
-    // .duration(1000)
     .attr("height", (d) => height - y(d.value));
 
   // Add one dot in the legend for each name.
@@ -172,12 +168,8 @@ export const chart_bar = (activity) => {
 
   groupBar.forEach((bar) => {
     let rectBar = bar.querySelector("rect");
-
     let x = rectBar?.getAttribute("x");
-    let y = rectBar?.getAttribute("y");
-
     let BBox = bar.getBBox();
-
     let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     rect.setAttribute("fill", "rgba(196, 196, 196, 0.5)");
     rect.setAttribute("width", BBox.width * 3);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { sessionChart } from "./utils";
 import PropTypes from "prop-types";
 

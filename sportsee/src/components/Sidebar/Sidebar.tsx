@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import * as d3 from 'd3'
 import '../Sidebar/Sidebar.css'
 import Tab from '../Tab/Tab';
 import yoga from '../../assets/img/yoga.svg'
@@ -17,10 +15,9 @@ const Sidebar: any = () => {
         <section className="sidebar_block" >
             <div className="sidebar_tab_block">
                 <Tab url="#" img={yoga} />
-                <Tab url="#" img={swim}/>
-                <Tab url="#" img={bike}/>
-                <Tab url="#" img={fit}/>
-
+                <Tab url="#" img={swim} />
+                <Tab url="#" img={bike} />
+                <Tab url="#" img={fit} />
             </div>
 
             <p className="sidebar_text">Copiryght, SportSee 2020</p>

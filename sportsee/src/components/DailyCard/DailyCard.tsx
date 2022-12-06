@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import * as d3 from 'd3'
 import '../DailyCard/DailyCard.css'
 import PropTypes from 'prop-types';
 
@@ -15,13 +13,6 @@ import PropTypes from 'prop-types';
  * @return {FunctionalComponent}
  * 
  */
-
-// type Props = {
-//     title: string
-//     subtitle: string
-//     icon: string
-//     bg: string
-// }
 
 const DailyCard: any = ({ title, subtitle, icon, bg }: any) => {
 

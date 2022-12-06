@@ -2,8 +2,7 @@ import * as d3 from "d3";
 
 export const donut_chart = (score) => {
   const width = 260,
-    height = 263,
-    margin = 10;
+    height = 263;
   let angle = 0.5 * Math.PI;
   // append the svg object to the div called 'donut'
   const svg = d3
