@@ -15,13 +15,13 @@ import PropTypes from "prop-types";
 const ActivityChart = ({ activity }: any) => {
   useEffect(() => {
     activity === undefined ? <></> : chart_bar(activity);
-  }, [activity]);
+  }, []);
 
   return <div className="bar_chart" id="my_dataviz"></div>;
 };
 
 ActivityChart.propTypes = {
-  activity: PropTypes.array,
+  activity: PropTypes.array.isRequired,
 };
 
 export default ActivityChart;

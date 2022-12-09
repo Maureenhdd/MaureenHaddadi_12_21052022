@@ -4,19 +4,18 @@ export const chart_bar = (activity) => {
   const margin = { top: 30, right: 30, bottom: 70, left: 60 },
     width = 835 - margin.left - margin.right,
     height = 290 - margin.top - margin.bottom;
-  // append the svg object to the body of the page
+
   const svg = d3
     .select("#my_dataviz")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
-    .attr("transform", `translate(${margin.right},${margin.top})`);
+    .attr("transform", `translate(${margin.right},${margin.top})`)
+    .attr("class", "chart_block");
 
-  d3.select("svg").attr("class", "chart_block");
-  // List of subgroups = header of the csv files = soil condition here
   const subgroups = ["kilogram", "calories"];
-  let groups = activity.map((day) => day.day);
+  let groups = activity.map((day, i) => (day.day = i + 1));
 
   let data = activity;
   let calories = Math.max(...data.map((kilo) => kilo.calories));
@@ -55,7 +54,6 @@ export const chart_bar = (activity) => {
     .range([0, x.bandwidth()])
     .padding(0.05);
 
-  // color palette = one color per subgroup
   const color = d3
     .scaleOrdinal()
     .domain(subgroups)
@@ -98,7 +96,6 @@ export const chart_bar = (activity) => {
     // Enter in data = loop group per group
     .data(data)
     .join("g")
-    .attr("fill", "blue")
     .attr("id", "fillBar")
     .attr("transform", (d) => `translate(${x(d.day)}, 0)`)
 

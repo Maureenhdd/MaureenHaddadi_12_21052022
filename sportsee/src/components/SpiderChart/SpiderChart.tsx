@@ -1,6 +1,8 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
+import './SpiderChart.css';
+
 
 
 /**
@@ -15,7 +17,7 @@ import PropTypes from 'prop-types';
 const SpiderChart = ({ perfData }: any) => {
 
     return (
-        <div className="spider_chart" style={{ width: 260, height: 289, backgroundColor: "#282D30", borderRadius: 10 }}>
+        <div className="spider_chart">
             <RadarChart
                 outerRadius={75} width={260} height={289}
                 data={perfData}
@@ -45,7 +47,7 @@ const SpiderChart = ({ perfData }: any) => {
 
 SpiderChart.propTypes = {
 
-    score: PropTypes.array,
+    perfData: PropTypes.array,
 }
 
 export default SpiderChart

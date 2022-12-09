@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { useQuery } from 'react-query'
@@ -16,27 +15,13 @@ import SpiderChart from './components/SpiderChart/SpiderChart';
 import API from './services/API'
 import Error from './Error';
 
-
-
-
-
-
 function App() {
-  const [isRendered, setIsRendered] = useState(false)
   const { data: scoreData } = useQuery<any>('score', API.getScoreData)
   const { data: sessionData } = useQuery<any>('session', API.getSessionData)
   const { data: activityData } = useQuery<any>('activity', API.getActivityData)
   const { data: perfDataKind } = useQuery<any>('performance', API.getPerfData)
 
-  let { isLoading, data, isError, error } = useQuery<any>('user', API.getUser)
-
-  useEffect(() => {
-    if (isRendered === false) {
-    }
-    setIsRendered(true)
-
-
-  }, [])
+  let { isLoading, data, isError } = useQuery<any>('user', API.getUser)
 
   if (isError) {
 
@@ -50,7 +35,6 @@ function App() {
         <Sidebar />
 
         <main className="row">
-
           <h1 className="title"> Bonjour <span>{data.data.userInfos.firstName}</span> </h1>
           <p className="subtitle">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           <div className='data_block'>
