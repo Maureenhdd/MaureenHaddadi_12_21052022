@@ -47,7 +47,7 @@ const SpiderChart = ({ perfData }: any) => {
 
 SpiderChart.propTypes = {
 
-    perfData: PropTypes.array,
+    perfData: PropTypes.array.isRequired,
 }
 
 export default SpiderChart

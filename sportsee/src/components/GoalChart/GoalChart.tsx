@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 /**
  * Component for Sessions graph
  * @component
- * @prop {array} score - daily goal of the user 
+ * @prop {number} score - daily goal of the user 
  * 
  * 
  * @return {FunctionalComponent}

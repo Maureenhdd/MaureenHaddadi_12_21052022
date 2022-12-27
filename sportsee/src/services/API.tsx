@@ -5,7 +5,7 @@ import Mock from './MockAPI'
  * @Class
  * @name API
  *
- * @return {Class}
+ * 
  *
  */
 
@@ -14,10 +14,10 @@ class API {
 
 	/**
 	 * Method to get information data of the user connected
-	 * @Method
+	 * @method
 	 * @name getUser
 	 *
-	 * @return {Object}
+	 * @return {Object} call result
 	 *
 	*/
 
@@ -38,7 +38,7 @@ class API {
 	 * @Method
 	 * @name getScoreData
 	 *
-	 * @return {number}
+	 * @return {number} call result
 	 *
 	 */
 
@@ -63,7 +63,7 @@ class API {
 	 * @Method
 	 * @name getSessionData
 	 *
-	 * @return {Array}
+	 * @return {Array} call result
 	 *
 	 */
 	getSessionData() {
@@ -89,7 +89,7 @@ class API {
 	 * @Method
 	 * @name getActivityData
 	 *
-	 * @return {Array}
+	 * @return {Array} call result
 	 *
 	 */
 
@@ -116,7 +116,7 @@ class API {
 	 * @Method
 	 * @name getPerfData
 	 *
-	 * @return {Array}
+	 * @return {Array} call result
 	 *
 	 */
 

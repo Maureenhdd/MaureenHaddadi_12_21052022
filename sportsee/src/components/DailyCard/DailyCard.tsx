@@ -29,19 +29,19 @@ DailyCard.propTypes = {
     /**
  * card's title
  */
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     /**
 * card's subtitle
 */
-    subtitle: PropTypes.string,
+    subtitle: PropTypes.string.isRequired,
     /**
 * card's icon url 
 */
-    icon: PropTypes.string,
+    icon: PropTypes.string.isRequired,
     /**
 * card's background color 
 */
-    bg: PropTypes.string
+    bg: PropTypes.string.isRequired
 }
 
 export default DailyCard

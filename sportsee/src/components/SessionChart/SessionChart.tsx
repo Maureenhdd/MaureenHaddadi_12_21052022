@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
  * @prop {array} sessisons - stock sessions of the user
  *
  *
- * @return {Component}
+ * @return {FunctionalComponent}
  *
  */
 
@@ -21,7 +21,7 @@ const SessionChart = ({ sessions }: any) => {
 };
 
 SessionChart.propTypes = {
-  sessions: PropTypes.array,
+  sessions: PropTypes.array.isRequired,
 };
 export default SessionChart;
 
